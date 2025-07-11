@@ -213,7 +213,7 @@ header{
     margin: auto;
 }
 .para{
-    color: #777;
+    color: #000000;
 }
 .head_1 .heading{
     padding: 15px 0;
@@ -230,7 +230,7 @@ header{
     padding: 15px 0;
     line-height: 1.5;
     margin-right: 3em;
-    color: #777;
+    color: #000000;
 }
 .left_box li{
     padding: 15px 0;
@@ -257,7 +257,7 @@ header{
 .right_box p{
     font-size: 15px;
     padding-top: 12px;
-    color: #777;
+    color: #000000;
 }
 /* ________route */
 .boxes_1{
@@ -323,12 +323,14 @@ header{
     padding: 12px 15px;
     font-size: 16px;
     outline: none;
-    border: 2px solid #082567;
+    border: NONE;
+    border-radius: 5PX;
 }
 .box_2 button{
-    background-color: #0092ff;
+    background-color: #ff9100;
     color: #fff;
-    border: 2px solid #fff;
+    border:none;
+    border-radius:5px;
 }
 /* ___________footer */
 .footer{
@@ -423,7 +425,7 @@ header{
     text-align: center;
     flex-direction: column;
     gap: 0.2rem;
-    background-color: #d6d6d6;
+    background-color: #71bdff;
     transition: 0.5s;
     z-index: -1;
     transform: translateY(-100%);
