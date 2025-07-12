@@ -334,7 +334,8 @@ header{
 }
 /* ___________footer */
 .footer{
-    display: grid;
+    display: flex;
+    justify-content: space-evenly;
     gap: 4rem 2rem;
     border-bottom: 1px solid #777;
     grid-template-columns: repeat(4,1fr);
