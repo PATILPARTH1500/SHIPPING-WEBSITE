@@ -326,6 +326,18 @@ header{
     border: NONE;
     border-radius: 5PX;
 }
+
+.box_2 textarea{
+    position:relative;
+    padding: 10px 10px;
+    font-size: 16px;
+    outline: none;
+    border: NONE;
+    border-radius: 5PX;
+    top:17px;
+    height:45px;
+}
+
 .box_2 button{
     background-color: #ff9100;
     color: #fff;
@@ -494,9 +506,11 @@ header{
 }
 .box_2 input,.box_2 button{
     width: 70%;
+    margin:10px;
 }
 .box_2 button{
     margin-top: 2%;
+    margin:10px;
 }
 .footer{
     grid-template-columns: repeat(1, 1fr);

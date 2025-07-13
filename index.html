@@ -169,9 +169,27 @@ Our Easy Transport service is designed for hassle-free movement of goods—no co
                 <h3 class="sub_heading">contact us</h3>
                 <h1 class="heading">leading digital solution <br> for company</h1>
             </div>
-            <div class="box_2">
-                <input type="text" name="text" placeholder="contact us">
-                <button class="btn">contact</button>
+            <div class="box_2" 
+">
+<form action="https://api.web3forms.com/submit" method="POST"style="text-transform: none;">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="9cada07d-ddb8-469c-b24e-5c0ce0f5e6ee">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" required placeholder="Message"></textarea>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+    <button type="submit" class="btn">Submit Form</button>
+
+</form>
             </div>
         </section>
         <!-- ________footer -->
