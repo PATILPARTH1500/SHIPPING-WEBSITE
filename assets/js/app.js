@@ -24,11 +24,27 @@ menuBtn.addEventListener('click',(e)=>{
 })
 
 // scroll to top
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
+// const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+// scrollToTopBtn.addEventListener('click', () => {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const btn1 = document.getElementById("btn1-link");
+  const btn2 = document.getElementById("btn2-link");
+
+  if (btn1 && btn2) {
+    if (window.innerWidth <= 768) {
+      btn1.innerText = "Sign Up";
+      btn1.setAttribute("href", "registration.html");
+
+      btn2.innerText = "Sign In";
+      btn2.setAttribute("href", "login.html");
+    }
+  } else {
+    console.error("❌ btn1-link or btn2-link not found in DOM");
+  }
+});
