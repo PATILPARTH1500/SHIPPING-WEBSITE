@@ -23,15 +23,6 @@ menuBtn.addEventListener('click',(e)=>{
     menuIcon.setAttribute('class', isOpen ? 'ri-close-line' : 'ri-menu-line')
 })
 
-// scroll to top
-// const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-// scrollToTopBtn.addEventListener('click', () => {
-//     window.scrollTo({
-//         top: 0,
-//         behavior: 'smooth'
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   const btn1 = document.getElementById("btn1-link");
   const btn2 = document.getElementById("btn2-link");
