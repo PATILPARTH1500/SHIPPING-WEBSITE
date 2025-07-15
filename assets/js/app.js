@@ -23,19 +23,29 @@ menuBtn.addEventListener('click',(e)=>{
     menuIcon.setAttribute('class', isOpen ? 'ri-close-line' : 'ri-menu-line')
 })
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("resize", () => {
   const btn1 = document.getElementById("btn1-link");
   const btn2 = document.getElementById("btn2-link");
 
-  if (btn1 && btn2) {
-    if (window.innerWidth <= 768) {
-      btn1.innerText = "Sign Up";
-      btn1.setAttribute("href", "registration.html");
+  if (!btn1 || !btn2) return;
 
-      btn2.innerText = "Sign In";
-      btn2.setAttribute("href", "login.html");
-    }
+  const isMobile = window.innerWidth <= 820;
+
+  if (isMobile) {
+    btn1.textContent = "Sign Up";
+    btn1.setAttribute("href", "registration.html");
+
+    btn2.textContent = "Sign In";
+    btn2.setAttribute("href", "login.html");
   } else {
-    console.error("❌ btn1-link or btn2-link not found in DOM");
+    btn1.textContent = "Explore More";
+    btn1.setAttribute("href", "#services");
+
+    btn2.textContent = "Contact Us";
+    btn2.setAttribute("href", "#contact");
   }
 });
+
+
+
+

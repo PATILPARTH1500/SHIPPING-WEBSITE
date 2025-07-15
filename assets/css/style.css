@@ -77,9 +77,10 @@ header{
 }
 
 .btn{
-    padding: 12px 15px;
+    padding: 5px 15px;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn a{
@@ -404,8 +405,9 @@ header{
     color: #fff;
 }
 
-
-
+.nav_menu {
+  display: none;
+}
 
 /* __________responsive */
 @media only screen and (max-width:920px){
@@ -442,10 +444,11 @@ header{
 .nav_items.open{
     transform: translateY(0);
 }
-.nav_menu{
+ .nav_menu {
     display: block;
     font-size: 2em;
-}
+    cursor: pointer;
+  }
 .nav_btns{
     display: none;
 }
