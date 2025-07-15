@@ -25,18 +25,23 @@ loginButton.addEventListener("click", function (event) {
   const password = document.getElementById('login-pass').value.trim();
 
   signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Successful login
-      document.getElementById("popup").classList.add("popup-show");
+  .then((userCredential) => {
+    const user = userCredential.user;
+    const username = email.replace('@gmail.com', '');
 
-      // Redirect after 2 seconds
-      setTimeout(() => {
-        window.location.href = "index.html";
-      }, 2000);
-    })
-    .catch((error) => {
-      console.error("Login error:", error.code, error.message);
-      alert("Login failed: " + error.message);
-    });
+    localStorage.setItem('isLoggedIn', 'true');
+    localStorage.setItem('username', username);
+
+    document.getElementById("popup").classList.add("popup-show");
+
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2000);
+  })
+  .catch((error) => {
+    console.error("Login error:", error.code, error.message);
+    alert("Login failed: " + error.message);
+  });
+
 });
 

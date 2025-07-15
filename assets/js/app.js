@@ -46,6 +46,37 @@ window.addEventListener("resize", () => {
   }
 });
 
+const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+const username = localStorage.getItem('username');
+
+const authButtons = document.querySelector('.nav_btns');
+const navbar = document.querySelector('.navbar');
+
+if (isLoggedIn && username) {
+  // Hide Sign In / Sign Up
+  if (authButtons) authButtons.style.display = 'none';
+
+  // Create display element
+  const userDisplay = document.createElement('div');
+  userDisplay.className = 'user_display';
+  userDisplay.style.display = 'flex';
+  userDisplay.style.alignItems = 'center';
+  userDisplay.style.gap = '10px';
+
+  userDisplay.innerHTML = `
+    <span style="font-weight:600;">Hi, ${username}</span>
+    <button class="btn btn2" id="logout_btn">Logout</button>
+  `;
+
+  navbar.appendChild(userDisplay);
+
+  // Logout
+  document.getElementById('logout_btn').addEventListener('click', () => {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('username');
+    window.location.reload();
+  });
+}
 
 
 

@@ -20,8 +20,9 @@ header{
 }
 
 .logo{
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
+    margin-left:20px;
 }
 
 .navbar{
@@ -136,6 +137,57 @@ header{
    max-width: 100%;
    height: auto;
 }
+.user_display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* __________________USER DISPLAY (MOBILE ONLY)__________________ */
+@media screen and (max-width: 820px) {
+  .user_display {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    margin-left: auto;
+    padding-right: 1rem;
+    margin-top: 10px;
+  }
+
+  .user_display span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .user_display #logout_btn {
+    font-size: 14px;
+    padding: 6px 12px;
+    background-color: rgb(255, 179, 79);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .user_display {
+    align-items: flex-end;
+    padding: 0;
+    margin-top: 10px;
+    margin-right: 1rem;
+  }
+
+  .user_display span {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .user_display #logout_btn {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+}
+
 
 /* ________about */
 .sec{
@@ -418,7 +470,7 @@ header{
         font-size: 2.7em;
     }
     .navbar {
-        padding: 2rem 2rem
+        padding: 1rem 0rem
     }
     .sec{
         width: 90%;
@@ -445,8 +497,8 @@ header{
     transform: translateY(0);
 }
  .nav_menu {
-    display: block;
-    font-size: 2em;
+    display: none;
+    font-size: 2rem;
     cursor: pointer;
   }
 .nav_btns{
